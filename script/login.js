@@ -1,4 +1,4 @@
 $('#membership').click(function(){
     console.log("hi")
-    window.open("./membership.html")
+    window.location.href = 'membership.html'
 })
