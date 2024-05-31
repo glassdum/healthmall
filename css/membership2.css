@@ -88,23 +88,70 @@ section .right form .idpw input[type = text] {
 section .right form .idpw input[type = password] {
     border-radius: 0 0 10px 10px;
 }
-
+section .right form .name{
+    position: relative;
+}
 section .right form .name input[type = text] {
     display: block;
     width: 500px;
     height: 40px;
-}
-
-section .right form .but_box 
-
-.gender, .nation {
-    padding: 10px;
-    margin: 5px;
     border: none;
-    cursor: pointer;
+    border: 1px solid #222;
+    border-top: none;
+    text-indent: 12px;
 }
-
-.active {
-    background-color: blue;
+section .right form .name input[type = text]:first-child {
+    border-top: 1px solid #222;
+    border-radius: 10px 10px 0 0;
+}
+section .right form .but_box {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #222;
+    border-top: none;
+}
+section .right form .but_box div {
+    display: flex;
+    padding: 8px;
+}
+section .right form .but_box div button {
+    display: block;
+    width: 60px;
+    height: 35px;
+    margin: 0; padding: 0;
+    cursor: pointer;
+    border: 1px solid #222;
+    border-right: none;
+    background: none;
+}
+section .right form .but_box div button:last-child {
+    border-right: 1px solid #222;
+}
+section .right form .but_box div button.active {
+    background-color: rgb(70, 70, 238);
     color: white;
+}
+section .right form select {
+    display: block;
+    width: 500px;
+    height: 45px;
+    border: 1px solid #222;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    text-indent: 12px;
+    margin-bottom: 150px;
+}
+section .right form .name input[type = text]:last-child {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    display: none;
+    height: 50px;
+    margin-top: 24px;
+    border-top: 1px solid #222;
+    border-radius: 10px;
+}
+section .right form .name input[type = text]:last-child.active {
+    display: block;
 }
