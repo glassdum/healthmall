@@ -1,1 +1,33 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+main section .img_box {
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+}
+main section .img_box .slick-dots {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    bottom: 4px;
+    display: flex;
+    gap: 20px;
+}
+main section .img_box .slick-dots button {
+    border: none;
+    background: #7fd398;
+    text-indent: -99999px;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+main section .img_box .slick-dots .slick-active button {
+    background: #056d24;
+}
