@@ -192,15 +192,8 @@ class Header extends HTMLElement {
         // mypage_btn 클릭 이벤트 처리
         const myPageButton = shadow.querySelector('.mypage_btn a');
 
-        if (window.location.pathname.endsWith('index.html')) {
+        if (window.location.pathname.endsWith('index_login.html') == false) {
             myPageButton.setAttribute('href', './login.html');
-        } else if (window.location.pathname.endsWith('index_login.html')) {
-            myPageButton.removeAttribute('href');
-            myPageButton.addEventListener('click', () => {
-                const subMenu = this.shadowRoot.querySelector('.menu .depth2');
-                console.log(".menu .depth2");
-                //subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
-            });
         }
     }
 }
