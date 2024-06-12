@@ -1,4 +1,831 @@
 // 템플릿 정의
+const menuData = [
+    {
+        title: "Story",
+        detail: [
+            {
+                title: "기업소개",
+            }
+        ]
+    },
+    {
+        title: "영양소별 찾기",
+        detail: [
+            {
+                title: "비타민 A, B",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "비타민 C, D",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "단백질",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "콜라겐",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "프락토올리고당",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "아연",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "칼륨, 칼슘",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "기타 영양소",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        title: "목적별 찾기",
+        detail: [
+            {
+                title: "다이어트",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "장 건강",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "관절 건강",
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "당뇨 관리", 
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "변비", 
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            },
+            {
+                title: "기타 목적", 
+                products: [
+                    {
+                        name: "제품1",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품5",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품4",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품2",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                    {
+                        name: "제품3",
+                        image: "path/to/image3.jpg",
+                        mainNutrient:"주요 영양성분: 비타민D, 비타민A, 콜라겐, 칼슘, 칼륨",
+                        manufacturer: "제조사3",
+                        releaseDate: "2024-03-01"
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        title: "고객페이지",
+        detail: [
+            {
+                title: "공지사항", 
+            },
+            {
+                title: "FAQ", 
+            },
+            {
+                title: "정보수정요구", 
+            },
+            {
+                title: "MyPage", 
+            }
+        ]
+    }
+];
+
+function generateMenu(menuData) {
+    const ul = document.createElement('ul');
+    ul.classList.add('menu');
+
+    menuData.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.link;
+        a.textContent = item.title;
+        li.appendChild(a);
+                         
+        if (item.detail && item.detail.length > 0) {
+            const subUl = document.createElement('ul');
+            subUl.classList.add('depth2');
+
+            item.detail.forEach(subItem => {
+                const subLi = document.createElement('li');
+                const subA = document.createElement('a');
+                subA.href = subItem.link;
+                subA.textContent = subItem.title;
+                subLi.appendChild(subA);
+                subUl.appendChild(subLi);
+            });
+
+            li.appendChild(subUl);
+        }
+
+        ul.appendChild(li);
+    });
+
+    return ul;
+}
+// 템플릿 정의
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -104,47 +931,6 @@ header .inner .left_inner .menu .depth2 li:hover a {
                     건강기능식품몰
                 </a>
             </h1>
-            <ul class="menu">
-                <li>
-                    <a href="javascript:void(0)">Story</a>
-                    <ul class="depth2">
-                        <li><a href="javascript:void(0)">기업소개</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">영양소별 찾기</a>
-                    <ul class="depth2">
-                        <li><a href="javascript:void(0)">비타민 A, B</a></li>
-                        <li><a href="javascript:void(0)">비타민 C, D</a></li>
-                        <li><a href="javascript:void(0)">단백질</a></li>
-                        <li><a href="javascript:void(0)">콜라겐</a></li>
-                        <li><a href="javascript:void(0)">프락토올리고당</a></li>
-                        <li><a href="javascript:void(0)">아연</a></li>
-                        <li><a href="javascript:void(0)">칼륨, 칼슘</a></li>
-                        <li><a href="javascript:void(0)">기타 영양소</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">목적별 찾기</a>
-                    <ul class="depth2">
-                        <li><a href="javascript:void(0)">다이어트</a></li>
-                        <li><a href="javascript:void(0)">장 건강</a></li>
-                        <li><a href="javascript:void(0)">관절 건강</a></li>
-                        <li><a href="javascript:void(0)">당뇨 관리</a></li>
-                        <li><a href="javascript:void(0)">변비</a></li>
-                        <li><a href="javascript:void(0)">기타 목적</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0)">고객페이지</a>
-                    <ul class="depth2">
-                        <li><a href="javascript:void(0)">기타 목적</a></li>
-                        <li><a href="javascript:void(0)">FAQ</a></li>
-                        <li><a href="javascript:void(0)">정보수정요구</a></li>
-                        <li><a href="javascript:void(0)">MyPage</a></li>
-                    </ul>
-                </li>
-            </ul>
         </div>
         <div class="right_inner">
             <button class="search_btn">
@@ -178,6 +964,10 @@ class Header extends HTMLElement {
         // 템플릿 콘텐츠 복제 및 Shadow DOM에 추가
         shadow.appendChild(template.content.cloneNode(true));
     
+        // 동적으로 메뉴 생성
+        const leftInner = shadow.querySelector('.left_inner');
+        leftInner.appendChild(generateMenu(menuData));
+    
         // 이벤트 처리 추가
         shadow.querySelector('.menu').addEventListener('mouseenter', () => {
             this.shadowRoot.querySelector('header').style.height = '480px';
@@ -191,10 +981,16 @@ class Header extends HTMLElement {
 
         // mypage_btn 클릭 이벤트 처리
         const myPageButton = shadow.querySelector('.mypage_btn a');
+        const indexButten = shadow.querySelector('.left_inner h1 a');
 
         if (window.location.pathname.endsWith('index_login.html') == false) {
             myPageButton.setAttribute('href', './login.html');
+            indexButten.setAttribute('href', 'index.html');
+        } else {
+            indexButten.setAttribute('href', 'index_login.html')
         }
+
+        console.log(indexButten);
     }
 }
 

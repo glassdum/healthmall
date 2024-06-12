@@ -1,0 +1,90 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {color: #222; text-decoration: none;}
+main {
+    display: flex;
+    justify-content: center;
+}
+main .goods_list {
+    width: 200px;
+    border-right: 2px solid #7fd398;
+}
+main .goods_list h1 {
+    padding: 24px 0;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #7fd398;
+}
+main .goods_list ul li {
+    border-bottom: 1px solid #7fd398;
+}
+main .goods_list ul li a {
+    display: block;
+    width: 100%;
+    padding: 6px 0 6px 12px;
+    font-size: 16px;
+}
+main section {
+    width: 1000px;
+    height: 750px;
+    padding-left: 100px;
+}
+main section .contentsBox {
+    max-height: 527.5px;
+    overflow: auto;
+}
+main section #depth2header {
+    margin: 80px 0 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+main section #depth2header h1 {
+    font-size: 24px;
+}
+main section #depth2header span {
+    display: block;
+    margin-left: 8px;
+}
+main section #depth2header p {
+    font-size: 20px;
+}
+main section .contents_inner {
+    margin-bottom: 30px;
+}
+main section .contents_inner>div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+main section .contents_inner div .img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+main section .contents_inner div .img img {
+    width: 200px;
+}
+main section .contents_inner>div .contents {
+    height: 100px;
+    width: 700px;
+}
+main section .contents_inner>div .contents #name {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+main section .contents_inner>div .contents #mainNutrient {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+main section .contents_inner>div .contents .mar {
+    display: flex;
+    justify-content: space-between;
+}
+main section.contents_inner>div .contents .mar span {
+    display: block;
+    font-size: 12px;
+}
