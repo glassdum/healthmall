@@ -24,6 +24,9 @@ main .goods_list ul li a {
     padding: 6px 0 6px 12px;
     font-size: 16px;
 }
+main .goods_list ul li.on a {
+    font-weight: bold;
+}
 main section {
     width: 1000px;
     height: 750px;
@@ -56,6 +59,7 @@ main section .contents_inner>div {
     display: flex;
     align-items: center;
     gap: 24px;
+    margin-bottom: 24px;
 }
 main section .contents_inner div .img {
     width: 100px;

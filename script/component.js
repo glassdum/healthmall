@@ -12,11 +12,11 @@ const menuData = [
     },
     {
         title: "영양소별 찾기",
-        link: "javascript:void(0)",
+        link: "nutrient001.html",
         detail: [
             {
                 title: "비타민 A, B",
-                link: "javascript:void(0)",
+                link: "nutrient001.html",
                 products: [
                     {
                         name: "제품1",
@@ -78,7 +78,7 @@ const menuData = [
             },
             {
                 title: "비타민 C, D",
-                link: "javascript:void(0)",
+                link: "nutrient002.html",
                 products: [
                     {
                         name: "제품1",
@@ -140,7 +140,7 @@ const menuData = [
             },
             {
                 title: "단백질",
-                link: "javascript:void(0)",
+                link: "nutrient003.html",
                 products: [
                     {
                         name: "제품1",
@@ -202,7 +202,7 @@ const menuData = [
             },
             {
                 title: "콜라겐",
-                link: "javascript:void(0)",
+                link: "nutrient004.html",
                 products: [
                     {
                         name: "제품1",
@@ -264,7 +264,7 @@ const menuData = [
             },
             {
                 title: "프락토올리고당",
-                link: "javascript:void(0)",
+                link: "nutrient005.html",
                 products: [
                     {
                         name: "제품1",
@@ -326,7 +326,7 @@ const menuData = [
             },
             {
                 title: "아연",
-                link: "javascript:void(0)",
+                link: "nutrient006.html",
                 products: [
                     {
                         name: "제품1",
@@ -388,7 +388,7 @@ const menuData = [
             },
             {
                 title: "칼륨, 칼슘",
-                link: "javascript:void(0)",
+                link: "nutrient007.html",
                 products: [
                     {
                         name: "제품1",
@@ -450,7 +450,7 @@ const menuData = [
             },
             {
                 title: "기타 영양소",
-                link: "javascript:void(0)",
+                link: "nutrient008.html",
                 products: [
                     {
                         name: "제품1",
@@ -514,11 +514,11 @@ const menuData = [
     },
     {
         title: "목적별 찾기",
-        link: "javascript:void(0)",
+        link: "purpose001.html",
         detail: [
             {
                 title: "다이어트",
-                link: "javascript:void(0)",
+                link: "purpose001.html",
                 products: [
                     {
                         name: "제품1",
@@ -580,7 +580,7 @@ const menuData = [
             },
             {
                 title: "장 건강",
-                link: "javascript:void(0)",
+                link: "purpose002.html",
                 products: [
                     {
                         name: "제품1",
@@ -642,7 +642,7 @@ const menuData = [
             },
             {
                 title: "관절 건강",
-                link: "javascript:void(0)",
+                link: "purpose003.html",
                 products: [
                     {
                         name: "제품1",
@@ -704,7 +704,7 @@ const menuData = [
             },
             {
                 title: "당뇨 관리", 
-                link: "javascript:void(0)",
+                link: "purpose004.html",
                 products: [
                     {
                         name: "제품1",
@@ -766,7 +766,7 @@ const menuData = [
             },
             {
                 title: "변비", 
-                link: "javascript:void(0)",
+                link: "purpose005.html",
                 products: [
                     {
                         name: "제품1",
@@ -828,7 +828,7 @@ const menuData = [
             },
             {
                 title: "기타 목적", 
-                link: "javascript:void(0)",
+                link: "purpose006.html",
                 products: [
                     {
                         name: "제품1",
