@@ -1109,10 +1109,10 @@ class Header extends HTMLElement {
             myPageButton.setAttribute('href', './login.html');
             indexButten.setAttribute('href', 'index.html');
             foundnumber = 1;
-            if(foundnumber == 1 && window.location.pathname.endsWith('/healthmall/nutrient001.html') || window.location.pathname.endsWith('/healthmall/nutrient002.html') || window.location.pathname.endsWith('/healthmall/nutrient003.html')|| window.location.pathname.endsWith('/healthmall/nutrient004.html')|| window.location.pathname.endsWith('/healthmall/nutrient005.html')|| window.location.pathname.endsWith('/healthmall/nutrient006.html')|| window.location.pathname.endsWith('/healthmall/nutrient007.html')|| window.location.pathname.endsWith('/healthmall/nutrient008.html')|| window.location.pathname.endsWith('/healthmall/purpose001.html')|| window.location.pathname.endsWith('/healthmall/purpose002.html')|| window.location.pathname.endsWith('/healthmall/purpose003.html')|| window.location.pathname.endsWith('/healthmall/purpose004.html')|| window.location.pathname.endsWith('/healthmall/purpose005.html')|| window.location.pathname.endsWith('/healthmall/purpose006.html') == true){
-                myPageButton.setAttribute('href', './login.html');
-                indexButten.setAttribute('href', 'index.html');
-            }
+            // if(foundnumber == 1 && window.location.pathname.endsWith('/healthmall/nutrient001.html') || window.location.pathname.endsWith('/healthmall/nutrient002.html') || window.location.pathname.endsWith('/healthmall/nutrient003.html')|| window.location.pathname.endsWith('/healthmall/nutrient004.html')|| window.location.pathname.endsWith('/healthmall/nutrient005.html')|| window.location.pathname.endsWith('/healthmall/nutrient006.html')|| window.location.pathname.endsWith('/healthmall/nutrient007.html')|| window.location.pathname.endsWith('/healthmall/nutrient008.html')|| window.location.pathname.endsWith('/healthmall/purpose001.html')|| window.location.pathname.endsWith('/healthmall/purpose002.html')|| window.location.pathname.endsWith('/healthmall/purpose003.html')|| window.location.pathname.endsWith('/healthmall/purpose004.html')|| window.location.pathname.endsWith('/healthmall/purpose005.html')|| window.location.pathname.endsWith('/healthmall/purpose006.html') == true){
+            //     myPageButton.setAttribute('href', './login.html');
+            //     indexButten.setAttribute('href', 'index.html');
+            // }
         } else {
             indexButten.setAttribute('href', 'index_login.html');
         }
