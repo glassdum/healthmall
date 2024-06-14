@@ -1,0 +1,82 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {color: #222; text-decoration: none;}
+main {
+    display: flex;
+    justify-content: center;
+}
+main .account {
+    width: 200px;
+    border-right: 2px solid #7fd398;
+}
+main .account h1 {
+    padding: 24px 0;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #7fd398;
+}
+main .account ul li {
+    border-bottom: 1px solid #7fd398;
+}
+main .account ul li a {
+    display: block;
+    width: 100%;
+    padding: 6px 0 6px 12px;
+    font-size: 16px;
+}
+main .account ul li.on a {
+    font-weight: bold;
+}
+main section {
+    width: 1000px;
+    height: 750px;
+    padding-left: 100px;
+}
+main section h1 {
+    margin: 80px 0 60px;
+}
+main section .off{
+    display: none;
+}
+main section .list ul {
+    width: 900px;
+}
+main section .list ul li {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #7fd398;
+    list-style: circle;
+}
+main section .list ul li:last-child {
+    border: none;
+}
+main section .list ul li a {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    text-indent: 12px;
+}
+main section .overpage {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+main section .overpage .overpage_bg {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    opacity: 0.8;
+}
+main section .overpage .overpage_main {
+    position: absolute;
+    width: 500px;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
