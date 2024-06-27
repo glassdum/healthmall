@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고객페이지</title>
     <link rel="stylesheet" href="./css/list.css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <my-header></my-header>
@@ -20,28 +21,50 @@
         </div>
         <section>
             <h1>FAQ</h1>
-            <div class="list off">
+            <div class="list">
                 <ul>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
-                    <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
                     <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
                     <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
                     <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
                     <li><a href="javascript:void(0)">FAQ <span>240614</span></a></li>
                 </ul>
             </div>
+            <div class="cBox">
+                <button id="create">작성하기</button>
+            </div>
             <div class="overpage">
                 <div class="overpage_bg"></div>
-                <div class="overpage_main"></div>
+                <div class="overpage_main">
+                    <button id="close">닫기</button>
+                    <form action="">
+                        <div>
+                            <p>제목 : <input type="text" id="tt" placeholder="제목을 입력해 주세요"></p>
+                            <p>아이디 : <input type="text" id="id" placeholder="아이디, 혹은 성명을 입력해 주세요"></p>
+                            <p>날짜 : <input type="date" name="" id="when"></p>
+                            <p>상세내용 : <textarea name="" id="textarea" placeholder="내용을 입력해 주세요"></textarea></p>
+                        </div>
+                        <div class="btn_box">
+                            <button id="save">save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="detail-overpage">
+                <div class="detail-overpage_bg"></div>
+                <div class="detail-overpage_main">
+                    <button id="detail-close">닫기</button>
+                    <div>
+                        <p>제목 : <span id="detail-tt"></span></p>
+                        <p>아이디 : <span id="detail-id"></span></p>
+                        <p>날짜 : <span id="detail-when"></span></p>
+                        <p>상세내용 : <span id="detail-textarea"></span></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <my-footer></my-footer>
     <script src="./script/component.js"></script>
+    <script src="./script/list.js"></script>
 </body>
 </html>

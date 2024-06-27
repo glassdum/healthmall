@@ -29,14 +29,11 @@ main .account ul li.on a {
 }
 main section {
     width: 1000px;
-    height: 750px;
+    min-height: 750px;
     padding-left: 100px;
 }
 main section h1 {
     margin: 80px 0 60px;
-}
-main section .off{
-    display: none;
 }
 main section .list ul {
     width: 900px;
@@ -57,6 +54,22 @@ main section .list ul li a {
     justify-content: space-between;
     text-indent: 12px;
 }
+
+main section .cBox {
+    display: flex;
+    justify-content: end;
+    margin: 25px 0;
+}
+main section .cBox #create {
+    display: block;
+    width: 120px;
+    height: 35px;
+    background: none;
+    border: 1px solid #7fd398;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 main section .overpage {
     position: fixed;
     left: 0;
@@ -64,6 +77,10 @@ main section .overpage {
     width: 100vw;
     height: 100vh;
     z-index: 100;
+    display: none;
+}
+main section .overpage.on {
+    display: block;
 }
 main section .overpage .overpage_bg {
     width: 100%;
@@ -73,10 +90,163 @@ main section .overpage .overpage_bg {
 }
 main section .overpage .overpage_main {
     position: absolute;
-    width: 500px;
+    width: 1000px;
     height: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
+    padding: 10px 35px;
+}
+
+#close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    text-indent: -99999px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#close::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #222;
+    transform: rotate(45deg);
+}
+#close::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #222;
+    transform: rotate(-45deg);
+}
+#tt, #id {
+    text-indent: 8px;
+    width: 500px;
+    height: 35px;
+}
+main section .overpage .overpage_main form div:first-child {
+    width: 700px;
+    margin-top: 100px;
+}
+main section .overpage .overpage_main form div p{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+}
+main section .overpage .overpage_main form div p:last-child {
+    display: flex;
+    align-items: baseline;
+}
+#textarea {
+    width: 500px;
+    height: 200px;
+    padding: 8px;
+}
+main section .overpage .overpage_main form .btn_box {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+main section .overpage .overpage_main form .btn_box button {
+    width: 100px;
+    height: 35px;
+    background: none;
+    border: 1.5px solid #7fd398;
+    border-radius: 10px;
+}
+
+main section .overpage .overpage_detail {
+    position: absolute;
+    width: 1000px;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px 35px;
+}
+
+/* 세부 내용을 표시할 모달 창 */
+main section .detail-overpage {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+main section .detail-overpage.on {
+    display: block;
+}
+main section .detail-overpage .detail-overpage_bg {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    opacity: 0.8;
+}
+main section .detail-overpage .detail-overpage_main {
+    position: absolute;
+    width: 1000px;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px 35px;
+}
+
+#detail-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    text-indent: -99999px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#detail-close::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #222;
+    transform: rotate(45deg);
+}
+#detail-close::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #222;
+    transform: rotate(-45deg);
+}
+main section .detail-overpage .detail-overpage_main div {
+    margin-top: 100px;
+}
+main section .detail-overpage .detail-overpage_main div p {
+    margin: 12px 0;
 }
