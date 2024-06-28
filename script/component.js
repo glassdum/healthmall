@@ -892,7 +892,7 @@ const menuData = [
     },
     {
         title: "고객페이지",
-        link: "javascript:void(0)",
+        link: "list.html",
         detail: [
             {
                 title: "공지사항", 
@@ -900,7 +900,7 @@ const menuData = [
             },
             {
                 title: "FAQ", 
-                link: "javascript:void(0)",
+                link: "list.html",
             },
             {
                 title: "정보수정요구", 
